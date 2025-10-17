@@ -1,5 +1,10 @@
-# ID: 145459872
+# ID: 145516907
 from string import digits
+
+
+DIGITS_SET = set(digits)
+OPEN_BRACKET = '['
+CLOSE_BRACKET = ']'
 
 
 def decode_instructions(encoded: str) -> str:
@@ -12,10 +17,6 @@ def decode_instructions(encoded: str) -> str:
     Returns:
         Раскодированная строка команд
     """
-    DIGITS_SET = set(digits)
-    OPEN_BRACKET = '['
-    CLOSE_BRACKET = ']'
-    
     stack: list[tuple[str, int]] = []
     current_string, current_number = '', ''
     
